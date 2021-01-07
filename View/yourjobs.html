@@ -38,11 +38,12 @@
                     </div>
                 </li>
             </ul>
+
         </div>
     </nav>
-    
+
     <br>
-    <h1>Your Dashboard</h1>
+    <h1 style="margin-left: 10px;">Your Jobs</h1>
     <br>
 
     <div class="row">
@@ -60,53 +61,3 @@
                 </div>
             </div>
         </div>
-        
-        <div class="col-sm-5" id="biggerCards2" style="margin-left:215px;">
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">Recent activity</h5>
-                    <a href="javascript:void(0);" onclick = "maxCardSize2();" class="card-link">Toogle size</a>
-                </div>
-            </div>
-        </div>
-        </div>
-        
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script>
-        function maxCardSize1() {
-            var i = document.getElementById("biggerCards1");
-            var o = document.getElementById("biggerCards2");
-            if (i.className === "col-sm-5") {
-                 i.classList.replace("col-sm-5", "col-sm-11"); 
-                 i.style.marginLeft = "58px";
-                 o.style.display = "none";
-          }
-            else if(i.className === "col-sm-11"){
-                i.classList.replace("col-sm-11", "col-sm-5");
-                i.style.marginLeft = "10px";
-                o.style.marginLeft = "215px"
-                o.style.display = "block";
-          }
-        }
-
-        function maxCardSize2() {
-            var i = document.getElementById("biggerCards2");
-            var o = document.getElementById("biggerCards1");
-            if (i.className === "col-sm-5") {
-                 i.classList.replace("col-sm-5", "col-sm-11");
-                 i.style.marginLeft = "58px";
-                 o.style.display = "none";
-          }
-            else if(i.className === "col-sm-11"){
-                i.classList.replace("col-sm-11", "col-sm-5");
-                i.style.marginLeft = "215px";
-                o.style.display = "block";
-          }
-        }
-      </script>
-</body>
-</html>
