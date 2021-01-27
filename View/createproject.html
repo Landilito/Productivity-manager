@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../Multimedia/favicon.png" type="image/png">
-    <title>Productivty Manager - Your Jobs</title>
+    <title>Productivty Manager - Projects</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg sticky-top navbar-light" style="background-color: #EBFFFF;">
@@ -39,76 +39,49 @@
                     </div>
                 </li>
             </ul>
-
         </div>
     </nav>
 
     <br>
-    <h1 style="margin-left: 10px;">Your Jobs</h1>
+    <h2 style="margin-left: 10px;">Create Projects</h2>
     <br>
 
-        <div class="col-md-3">
-            <div class="card text-center">
-                <div class="card-body">
-                    <h5 class="card-header">Project 1</h5>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><a href="#" class="card-link"> Ticket 1</a></li>
-                        <li class="list-group-item"><a href="#" class="card-link"> Ticket 2</a></li>
-                        <li class="list-group-item"><a href="#" class="card-link"> Ticket 3</a></li>
-                        <li class="list-group-item"><a href="#" class="card-link"> Ticket 4</a></li>
-                    </ul>
-                    <a href="javascript:void(0);" onclick = "maxCardSize1();" class="card-footer">Toogle size</a>
+    <div class="card text-center mx-auto" style="width: 25rem;">
+        <div class="card-header">
+            <h4>Project Form</h4>
+        </div>
+        <div class="card-body">
+            <form class="form">
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Project Name</label>
+                    <div class="col-lg-9">
+                        <input class="form-control" type="text">
+                    </div>
                 </div>
-            </div>
-        </div>
-
-    <br>
-        
-        <div>
-            <div class="tab col-md-12" style="margin-left:10px;">
-                <button class="tablinks" onclick="selectTab(event, 'Working');">Already Worked</button>
-                <button class="tablinks" onclick="selectTab(event, 'Assignments');">My Assignments</button>
-            </div>
-        
-            <div id="Working" class="tabcontent">
-                <h3>Worked</h3>
-                <span>In progress tab</span>
-            </div>
-        
-            <div id="Assignments" class="tabcontent">
-                <h3>Assignments</h3>
-                <span>Assigned tabs</span>
-            </div>
-        </div>
-        
-    
-    
-
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Project Owner</label>
+                    <div class="col-lg-9">
+                        <select id="project_owner" class="form-control" size="0">
+                            <option value="User">User 1</option>
+                            <option value="User">User 2</option>
+                            <option value="User">User 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-lg-3 col-form-label form-control-label">Project Type</label>
+                    <div class="col-lg-9">
+                        <select id="project_type" class="form-control" size="0">
+                            <option value="Type">Type 1</option>
+                            <option value="Type">Type 2</option>
+                            <option value="Type">Type 3</option>
+                        </select>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-primary">Create</a>
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-    <script>
-        function selectTab(evt, viewName){
-            var i;
-            var tabcontent;
-            var tablinks;
-
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++){
-                tabcontent[i].style.display = "none";
-            }
-
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++){
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            document.getElementById(viewName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-    </script>
-    
 </body>
-    
